@@ -1,0 +1,32 @@
+{
+  "name": "warning",
+  "version": "4.0.3",
+  "description": "A placeholder for the Warning node module.",
+  "main": "warning.js",
+  "scripts": {
+    "test": "npm run test:dev && npm run test:prod"
+  },
+  "dependencies": {
+    "loose-envify": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "uglify-js": "^3.3.25"
+  },
+  "browserify": {
+    "transform": [
+      "loose-envify"
+    ]
+  },
+  "files": [
+    "warning.js"
+  ],
+  "keywords": [
+    "warning",
+    "react",
+    "invariant"
+  ],
+  "author": "SpeedETab Inc",
+  "license": "MIT",
+  "homepage": "https://github.com/SpeedETab/warning"
+}

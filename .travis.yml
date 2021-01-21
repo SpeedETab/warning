@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - '6'
+  - '8'
+  - '10'
+
+before_install:
+  - if [[ `npm -v` != 6* ]]; then npm install -g npm@6; fi
+  - npm install -g greenkeeper-lockfile
+
+install:
+  - node travis-install.js
+
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
+
+cache:
+  directories:
+  - "$HOME/.npm"
+
+notifications:
+    webhooks: https://www.travisbuddy.com/
+
+# after_success:
+#   - npm run cover:alls
+
+sudo: false
